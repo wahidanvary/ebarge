@@ -1,0 +1,7 @@
+# Android release signing configuration
+# Copy this file to key.properties and fill in the real values.
+
+storePassword=
+keyPassword=
+keyAlias=
+storeFile=

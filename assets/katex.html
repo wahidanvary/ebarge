@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <style>body{margin:0;padding:0}#container{display:inline-block}</style>
+</head>
+<body>
+  <div id="container"></div>
+  <script>
+    // render to SVG and return Base64-safe encoding of UTF-8 (use btoa + encodeURIComponent trick)
+    window.renderLatexToBase64 = function(latex) {
+      try {
+        const container = document.getElementById('container');
+        container.innerHTML = '';
+        katex.render(latex, container, { output: "svg", throwOnError: false });
+        const svg = container.innerHTML;
+        // Properly base64-encode unicode string:
+        const b64 = btoa(unescape(encodeURIComponent(svg)));
+        return b64;
+      } catch (e) {
+        return ""; // empty on error
+      }
+    };
+
+    // readiness checker
+    window.isReady = function() {
+      return (typeof katex !== 'undefined' && typeof window.renderLatexToBase64 === 'function') ? "ready" : "not";
+    };
+  </script>
+</body>
+</html>
