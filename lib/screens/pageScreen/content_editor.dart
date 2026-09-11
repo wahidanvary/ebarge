@@ -10,7 +10,6 @@ import 'package:ebarge/services/accessCheck.dart';
 import 'package:ebarge/providers/userProvider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ContentEditor extends StatefulWidget {
   const ContentEditor({Key? key, required this.content, required this.pageData, required this.book, required this.pageNumToId}) : super(key: key);
@@ -105,7 +104,7 @@ class _ContentEditorState extends State<ContentEditor> {
       child: Platform.isIOS
           ? IconButton(
         icon: (_showMaterialonIOS)
-            ? FaIcon(FontAwesomeIcons.apple)
+            ? Icon(Icons.phone_iphone) // Changed from FaIcon(FontAwesomeIcons.apple)
             : Icon(Icons.android),
         onPressed: () {
           setState(() {

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb208f40-4e46-4121-9b33-70c32a7ce770" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/AI/AI_QUESTION_GENERATION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/API_MAP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/ARCHITECTURE_MAP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/AUTHENTICATION.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/AZBAZI.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/CHANGE_GUIDELINES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/CHANGE_IMPACT_MAP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/CODE_MAP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/DATABASE_MAP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/DATA_FLOW.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/DEEP_LINKING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/DEVELOPMENT_PROTOCOL.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/KNOWN_ISSUES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/NOTES_AND_ANNOTATIONS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/PAYMENT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/PROJECT_CONTEXT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/SECURITY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/TECHNICAL_DEBT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/AI/TESTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Architecture/API.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Architecture/DATABASE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Architecture/FLUTTER.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Architecture/OVERVIEW.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Architecture/SECURITY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Architecture/TECHNICAL_DEBT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Decision/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Development/CODING_RULES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Development/TESTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Development/WORKFLOW.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/audit/FINAL_AUDIT_REPORT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/audit/PREVIOUS_FINDINGS_VERIFICATION.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" afterPath="$PROJECT_DIR$/CLAUDE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/05-operations/ENVIRONMENT.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/operations/ENVIRONMENT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_poolakey/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_poolakey/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/pageScreen/content_editor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/pageScreen/content_editor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/pageScreen/note_editor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/pageScreen/note_editor.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_D:/FlutterProjects/ebarge" value="3Ha66hUjjadb9byz4kAinNcFPYN" />
+      <entry key="_D:/FlutterProjects/ebarge/android" value="3J7UVTvweGGbrx3luA3oTgHreAC" />
+    </persistenceIdMap>
+  </component>
+  <component name="DartProblemsView" auto-scroll-to-source="true" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\hp\.android\avd\Medium_Phone.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/android">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2zBsNYJ4PPQoAEWsfWmNf5ZKGRn" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.android.app.executor": "Run",
+    "Flutter.main.dart.executor": "Debug",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PROJECT_TRUSTED_KEY": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "ToolWindow.Messages.ShowToolbar": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "dev.sweep.assistant.data.RecentlyEditedFiles": "lib\\screens\\pageScreen\\note_editor.dart;lib\\azbazi\\oneAzBaziScreen.dart;lib\\azbazi\\oneAzbaziProfileSc.dart;lib\\azbazi\\pages\\game-page\\game-page.dart;pubspec.yaml;lib\\azbazi\\components\\icons\\azQStreak.dart;lib\\azbazi\\components\\coins-converter.view.dart;lib\\azbazi\\change-notifiers\\azStreak-notifier.dart;lib\\azbazi\\change-notifiers\\scores-notifier.dart;lib\\providers\\userProvider.dart",
+    "dev.sweep.assistant.data.RecentlyUsedFiles": "pubspec.yaml;lib\\screens\\pageScreen\\note_editor.dart;lib\\azbazi\\oneAzBaziScreen.dart;lib\\azbazi\\oneAzbaziProfileSc.dart;lib\\azbazi\\pages\\game-page\\game-page.dart;lib\\azbazi\\change-notifiers\\azStreak-notifier.dart;lib\\azbazi\\components\\icons\\azQStreak.dart;lib\\azbazi\\components\\icons\\scores.dart;lib\\azbazi\\change-notifiers\\scores-notifier.dart;lib\\azbazi\\change-notifiers\\timeBal-notifier.dart",
+    "git-widget-placeholder": "opencode-test",
+    "ignore.virus.scanning.warn.message": "true",
+    "io.flutter.project.isFirstOpen": "true",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/FlutterProjects/ebarge",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "dart.settings",
+    "show.migrate.to.gradle.popup": "false",
+    "sweep.chatMode": "Agent"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FlutterProjects\ebarge\android\app\src\main" />
+      <recent name="D:\FlutterProjects\ebarge\android" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="AndroidRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="android.app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="android.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ebarge_android" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="ebarge_android" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb208f40-4e46-4121-9b33-70c32a7ce770" name="Changes" comment="" />
+      <created>1751215769812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751215769812</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/azbazi/pages/addQsAiForm.dart</url>
+          <line>65</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/services/GlobalKeys.dart</url>
+          <line>37</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="dart-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="ir.ebarge.ebarge">
+          <value>
+            <CheckInfo lastCheckTimestamp="1762327528918" />
+          </value>
+        </entry>
+        <entry key="ir.ebarge.ebarge.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1762327528913" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

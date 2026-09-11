@@ -82,7 +82,7 @@ class _NoteEditorState extends State<NoteEditor> with CommandHandler {
               appBarTheme: Theme.of(context).appBarTheme.copyWith(
                 elevation: 0,
               ),
-              scaffoldBackgroundColor: _noteColor, bottomAppBarTheme: BottomAppBarTheme(color: _noteColor),
+              scaffoldBackgroundColor: _noteColor, bottomAppBarTheme: BottomAppBarThemeData(color: _noteColor),
             ),
             child: AnnotatedRegion<SystemUiOverlayStyle>(
               value: SystemUiOverlayStyle.dark.copyWith(
