@@ -1,12 +1,11 @@
 import 'dart:io';
 
-import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
-import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:path_provider/path_provider.dart';
 
 import 'GlobalKeys.dart';
+import 'network/http_client.dart';
+import 'network/api_exception.dart';
 
 class AccessCheck {
   AccessCheck();
@@ -35,20 +34,17 @@ class AccessCheck {
     try {
       var url = GlobalKeys.ebargeUrl + '/index.php?option=com_jbackend&view=request';
 
-      var dio = Dio();
-      FormData formData = new FormData.fromMap({
+      // Use the centralized HTTP client instead of creating a new Dio instance
+      final httpClient = HttpClient();
+      await httpClient.initialize();
+      
+      FormData formData = FormData.fromMap({
         "action": "post",
         "module": "books",
         "resource": "versioning",
       });
 
-      Directory appDocDir = await getApplicationDocumentsDirectory();
-      String appDocPath = appDocDir.path;
-      var cookieJar = PersistCookieJar(
-          ignoreExpires: true,
-          storage: FileStorage(appDocPath+"/.cookies/"));
-      dio.interceptors.add(CookieManager(cookieJar));
-      var response = await dio.post(url, data: formData);
+      var response = await httpClient.post(url, data: formData);
 
       if (response.statusCode == 200) {
         //Successful
@@ -57,7 +53,7 @@ class AccessCheck {
         print("درخواست با خطا مواجه شد");
         return null;
       }
-    } catch (e) {
+    } on ApiException catch (e) {
       print(e);
       return null;
     }

@@ -1,12 +1,11 @@
 import 'dart:io';
 
-import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
-import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 import 'package:ebarge/models/bookModel.dart';
 import 'package:ebarge/models/pageModel.dart';
 import 'package:flutter/widgets.dart';
-import 'package:path_provider/path_provider.dart';
+import 'network/http_client.dart';
+import 'network/api_exception.dart';
 
 class GlobalKeys {
   static final navigatorKey = GlobalKey<NavigatorState>();
@@ -43,19 +42,17 @@ class GlobalKeys {
     try {
       var url = ebargeUrl +
           '/index.php?option=com_jbackend&view=request&action=get&module=pages&resource=getpages';
-      var dio = Dio();
-      FormData formData = new FormData.fromMap({
+      
+      // Use the centralized HTTP client instead of creating a new Dio instance
+      final httpClient = HttpClient();
+      await httpClient.initialize();
+      
+      FormData formData = FormData.fromMap({
         "book_id": _book.book_id,
         "page_id": pageId,
       });
 
-      Directory appDocDir = await getApplicationDocumentsDirectory();
-      String appDocPath = appDocDir.path;
-      var cookieJar = PersistCookieJar(
-          ignoreExpires: true,
-          storage: FileStorage(appDocPath + "/.cookies/"));
-      dio.interceptors.add(CookieManager(cookieJar));
-      var response = await dio.post(url, data: formData);
+      var response = await httpClient.post(url, data: formData);
       pageModel _pageData = pageModel(
           response.data['page_id'],
           response.data['page_image'],
@@ -78,6 +75,8 @@ class GlobalKeys {
           response.data['error_code'],
           response.data['error_description']);
       return _pageData;
+    } on ApiException catch (e) {
+      print(e);
     } catch (e) {
       print(e);
     }
@@ -88,8 +87,12 @@ class GlobalKeys {
     if (_pageData.page_id != '') {
       try {
         var url = ebargeUrl + '/index.php?option=com_jbackend&view=request';
-        var dio = Dio();
-        FormData formData = new FormData.fromMap({
+        
+        // Use the centralized HTTP client instead of creating a new Dio instance
+        final httpClient = HttpClient();
+        await httpClient.initialize();
+        
+        FormData formData = FormData.fromMap({
           "page_id": _pageData.page_id,
           "isvisit": "1",
           "action": "post",
@@ -97,13 +100,7 @@ class GlobalKeys {
           "resource": "uviewaddup",
         });
 
-        Directory appDocDir = await getApplicationDocumentsDirectory();
-        String appDocPath = appDocDir.path;
-        var cookieJar = PersistCookieJar(
-            ignoreExpires: true,
-            storage: FileStorage(appDocPath+"/.cookies/"));
-        dio.interceptors.add(CookieManager(cookieJar));
-        var response = await dio.post(url, data: formData);
+        var response = await httpClient.post(url, data: formData);
 
         if (response.statusCode == 200) {
           //Successful
@@ -133,6 +130,8 @@ class GlobalKeys {
         } else {
           print("درخواست با خطا مواجه شد");
         }
+      } on ApiException catch (e) {
+        print(e);
       } catch (e) {
         print(e);
       }
