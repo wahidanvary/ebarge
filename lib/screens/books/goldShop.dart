@@ -119,15 +119,15 @@ class _GoldShopScreenState extends State<GoldShopScreen> {
           dio.interceptors.add(CookieManager(cookieJar));
           ebargeResponse = await dio.post(url, data: formData);
 
-          if (ebargeResponse.statusCode != 200) {
-            var failedResponse;
-            failedResponse.data["status"] = "ko";
-            failedResponse.data["error_code"] = "ebarge_fail";
-            failedResponse.data["error_description"] = "در ارتباط شما با ایبرگه حطایی رخ داد با پشتیبانی تماس بگیرید!";
-            ebargeResponse = failedResponse;
-          }
+          final Map<String, dynamic> ebargeData = ebargeResponse.statusCode != 200
+              ? <String, dynamic>{
+                  "status": "ko",
+                  "error_code": "ebarge_fail",
+                  "error_description": "در ارتباط شما با ایبرگه حطایی رخ داد با پشتیبانی تماس بگیرید!",
+                }
+              : ebargeResponse.data;
 
-          if(ebargeResponse.data["status"] == "ok"){
+          if(ebargeData["status"] == "ok"){
             setState(() {
               widget.walGold = widget.walGold! + goldAmount;
             });
@@ -135,7 +135,7 @@ class _GoldShopScreenState extends State<GoldShopScreen> {
           }
 
           else
-            showSnackBar(ebargeResponse.data["error_description"]);
+            showSnackBar(ebargeData["error_description"]);
         } catch (e) {
           showSnackBar("خطا در خرید ${e.toString()}");
         }
