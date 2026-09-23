@@ -83,11 +83,18 @@ class QuestionProvider extends ChangeNotifier{
             oneQuestionJson['max_score'] = oneQuestionJson['max_score'].toDouble();
             _onlineQuestions.add(questionModel.fromJson(oneQuestionJson));
           }
-          await azbazisQueries().syncUserQsOnLocalDB(
-              _onlineQuestions, _questions, azbaziId);
-
-          if(fillPages) _questions = _onlineQuestions;
         }
+
+        // هشدار (BUG-04): همگام‌سازی تنها پس از دریافت موفقیت‌آمیز «تمام» صفحات سرور
+        // انجام می‌شود. اگر داخل حلقه صفحه‌بندی فراخوانی شود، چون مجموعه کامل
+        // شناسه‌های سرور هنوز مشخص نیست، سوالات صفحات بعدی به اشتباه «یتیم» تشخیص
+        // داده شده و از دیتابیس محلی حذف می‌شوند (حذف مخرب در حالت صفحه‌بندی جزئی).
+        // از همین رو `_onlineQuestions` ابتدا در تمام صفحات انباشته می‌شود و سپس
+        // یک‌بار، به صورت کامل، همگان می‌گردد.
+        await azbazisQueries().syncUserQsOnLocalDB(
+            _onlineQuestions, _questions, azbaziId);
+
+        _questions = _onlineQuestions;
       }
       if (_questions.length > 0) {
         _questionStatus = QuestionStatus.ExistQuestions;

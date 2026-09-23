@@ -85,14 +85,26 @@ class azbazisQueries{
 
         // ۳. عملیات حذف رکوردهای یتیم (Orphaned Records)
         // حذف سوالاتی که در سرور نیستند اما در لوکال باقی مانده‌اند
+        // توجه (BUG-04): حذف باید حتماً به ازبازی فعلی محدود شود تا همگام‌سازی
+        // یک ازبازی نتواند سوالات ازبازی دیگر را حذف کند. شناسایی سوالات یتیم
+        // توسط تابع خالص `orphanedQuestionIds` انجام می‌شود که مستقیماً تست
+        // می‌شود؛ شرط SQL نیز برای ایمنی مضاعف با `azbazi_id` محدود شده است.
+        // نکته: این بخش تنها پس از دریافت تمام صفحات سرور اجرا می‌شود
+        // (فراخوانی بیرون حلقه صفحه‌بندی در QuestionProvider).
         if (onlineIds.isNotEmpty) {
-          // ایجاد رشته‌ای به شکل '1','2','3' برای کوئری
-          String placeholders = List.filled(onlineIds.length, '?').join(',');
-          await txn.delete(
-            questionsTable,
-            where: 'question_id NOT IN ($placeholders)',
-            whereArgs: onlineIds,
+          final List<String> orphanedIds = orphanedQuestionIds(
+            onlineAzbaziQs: onlineAzbaziQs,
+            oldLocalAzbaziQs: oldLocalAzbaziQs,
+            azbaziId: azbaziId,
           );
+          if (orphanedIds.isNotEmpty) {
+            String placeholders = List.filled(orphanedIds.length, '?').join(',');
+            await txn.delete(
+              questionsTable,
+              where: 'azbazi_id = ? AND question_id IN ($placeholders)',
+              whereArgs: [azbaziId, ...orphanedIds],
+            );
+          }
         }
       });
 
@@ -100,6 +112,36 @@ class azbazisQueries{
     } catch (e) {
       if (kDebugMode) print("خطا در همگام‌سازی: $e");
     }
+  }
+
+  /// شناسه‌ی سوالات محلی که باید در پایان همگام‌سازی به عنوان «یتیم» حذف شوند.
+  ///
+  /// نکته مهم (BUG-04): این متد صرفاً یک محاسبه‌ی خالص است و به دیتابیس دسترسی
+  /// ندارد. پروایدر باید آن را تنها پس از دریافت موفقیت‌آمیز «تمام» صفحات سرور
+  /// فراخوانی کند؛ در غیر این صورت مجموعه‌ی کامل شناسه‌های سرور هنوز در دسترس
+  /// نیست و سوالات صفحات بعدی به اشتباه یتیم تلقی شده و حذف می‌شوند.
+  ///
+  /// [oldLocalAzbaziQs] تمام سوالات محلی (در صورت وجود شامل ازبازی‌های دیگر).
+  /// اپلیکیشن همواره این لیست را برای یک `azbazi_id` مشخص می‌سازد، اما این
+  /// متد برای ایمنی مضاعف، خودش نیز دوباره بر اساس `azbazi_id` فیلتر می‌کند.
+  @visibleForTesting
+  static List<String> orphanedQuestionIds({
+    required List<questionModel> onlineAzbaziQs,
+    required List<questionModel> oldLocalAzbaziQs,
+    required String azbaziId,
+  }) {
+    final Set<String> onlineIds =
+        onlineAzbaziQs.map((e) => e.question_id ?? '').toSet();
+
+    // حذف در SQL با `azbazi_id = ? AND question_id IN (orphanedIds)` محدود
+    // می‌شود، بنابراین اینجا نیز فقط سوالات همان ازبازی مورد بررسی قرار
+    // می‌گیرند. شناسه‌های تکراری حذف می‌شوند تا placeholderهای SQL سالم بمانند.
+    return oldLocalAzbaziQs
+        .where((q) => q.azbazi_id == azbaziId && !onlineIds.contains(q.question_id))
+        .map((e) => e.question_id ?? '')
+        .where((id) => id.isNotEmpty)
+        .toSet()
+        .toList();
   }
 
   Future<Map<String, dynamic>?> upUVQOnlineDB(String qId, String myQRate, List<String>? answerMap) async {
