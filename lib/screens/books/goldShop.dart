@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:another_flushbar/flushbar.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
@@ -149,18 +148,29 @@ class _GoldShopScreenState extends State<GoldShopScreen> {
   }
 
   void showSnackBar(String TXT) {
-    Flushbar(
-      margin: EdgeInsets.all(8),
-      borderRadius: BorderRadius.circular(8),
-      backgroundGradient: LinearGradient(colors: [Colors.white70, Colors.black12]),
-      messageText: Directionality(
+    // NOTE: This must NOT push a route. A Flushbar is pushed onto the Navigator
+    // (Flushbar.show -> Navigator.push) and removes itself with Navigator.pop()
+    // when its duration expires. That self-pop can throw inside NavigatorState.pop()
+    // while _debugLocked is held, which permanently locks the Navigator in debug
+    // builds; the very next Navigator.push (e.g. a later tap here) then fails
+    // asserts !_debugLocked. SnackBar is an overlay, so it never touches the
+    // Navigator and cannot lock it.
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Directionality(
           textDirection: TextDirection.rtl,
-          child: Text(TXT,
+          child: Text(
+            TXT,
             style: TextStyle(fontSize: 14.0, color: Colors.white, fontFamily: "Vazir"),
-          )
+          ),
+        ),
+        duration: const Duration(seconds: 3),
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.all(8),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        backgroundColor: Colors.black54,
       ),
-      duration:  Duration(seconds: 3),
-    )..show(context);
+    );
   }
 
   Widget build(BuildContext context) {

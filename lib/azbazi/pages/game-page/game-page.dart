@@ -1,6 +1,5 @@
 // ignore_for_file: file_names
 
-import 'dart:ffi';
 import 'dart:io';
 import 'dart:math' as math;
 
